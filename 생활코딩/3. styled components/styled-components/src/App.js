@@ -21,6 +21,12 @@ const ReactLargeButton = styled(ReactButton)`
   font-size: 50px;
 `;
 
+// dynamic methond
+const PrimaryButton = styled.button`
+  color: ${ props => props.primary ? 'white' : 'black' };
+  background-color: ${ props => props.primary ? 'blue' : 'gray' };
+`;
+
 function App() {
   return (
     <div>
@@ -28,6 +34,8 @@ function App() {
       <LargeButton>Large</LargeButton>
       <ReactButton>React</ReactButton>
       <ReactLargeButton>React Large</ReactLargeButton>
+      <PrimaryButton>Normal</PrimaryButton>
+      <PrimaryButton primary>Primary</PrimaryButton>
     </div>
   );
 }
